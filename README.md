@@ -12,8 +12,17 @@ Para cada pixel de la imagen se buscará los 8 pixeles adyacentes en todas las d
 ### Foto de prueba 
 ![alt text](https://github.com/heckio/median-filter/blob/master/src/main/imgs/test.jpg)
 ### Serial
+![alt text](https://github.com/heckio/median-filter/blob/master/src/main/imgs/linearIMG.jpg)
 ### Paralelo
+![alt text](https://github.com/heckio/median-filter/blob/master/src/main/imgs/concurrentIMG.jpg)
+
 
 ## Tiempo de ejecicion
 ### Serial
+```bash
+[debug] Load.apply: finalTransforms took 12.9815ms
+```
 ### Paralelo
+```bash
+[debug] Load.apply: finalTransforms took 5.1256ms
+```
