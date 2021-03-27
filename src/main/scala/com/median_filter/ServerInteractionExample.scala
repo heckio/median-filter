@@ -40,7 +40,7 @@ class LinearMedianFilterActor ( var windowWidth: Int, var windowHeight: Int ) ex
     }
     outputPixelValue
   }
-
+//input for train test image
   def receive: Receive = {
     case image:BufferedImage =>
       log.info("Received image")
@@ -89,7 +89,6 @@ class ConcurrentMedianFilterActor ( var windowWidth1: Int, var windowHeight1: In
       }
       futures += otherFuture
     }
-    //Since futures are being handled the image will finish by the time its being written
     outputPixelValue
   }
 }
@@ -123,11 +122,10 @@ class Server extends Actor {
 }
 
 object Main extends App {
-  // These variables are a simulation of a server
   val system = ActorSystem("Server_Example")
   var server = system.actorOf(Props[Server],"Server")
-  // read image
-  var path = new File("./src/main/imgs/train.jpg")
+  // open charlie chaplin image
+  var path = new File("./src/main/imgs/test.jpg")
   println(path.getAbsolutePath)
   if (args.length != 0) {
     var path = new File(args(0))
