@@ -10,6 +10,7 @@ Para cada pixel de la imagen se buscará los 8 pixeles adyacentes en todas las d
 
 ## Imagenes 
 ### Foto de prueba 
+![alt text](https://github.com/heckio/median-filter/blob/master/src/main/imgs/test.jpg)
 ### Serial
 ### Paralelo
 
